@@ -1,6 +1,7 @@
 expenses=[]; 
 
 document.querySelector('.js-add').addEventListener('click',addTransaction);
+const history = document.querySelector('.expense-history');
     
 function addTransaction(){
     const amount=document.querySelector('.js-amount').value;
@@ -19,6 +20,14 @@ function addTransaction(){
     expenses.push(expense);
     
     console.log(expenses);
+
+        history.innerHTML += `
+        <div>$${expense.amount}</div>
+        <div>${expense.description}</div>
+        <div>${expense.type}</div>
+        <div>${expense.category}</div>
+
+    `;
 }
 
 
