@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracler</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+  
+    <form>
+        <div class="input-container">
+            <input type="number" class="js-amount" placeholder="Enter amount">
+            <input type="text" class="js-description" placeholder="Description">
+            <select class="js-type">
+                <option>Income</option>
+                <option>Expense</option>
+            </select> 
+            <select class="js-category">
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Salary</option>
+            </select>
+            <button type="button" class="js-add">Add Transaction</button>
+        </div>
+
+        
+    </form>
+    <div class="expense-history">
+        
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

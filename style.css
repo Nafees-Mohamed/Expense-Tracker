@@ -1,0 +1,26 @@
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    gap: 8px;
+}
+
+.input-container input,select{
+    width:180px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.input-container button{
+    width: 130px;
+    padding: 8px;
+    border-radius: 15px;
+    margin-left: 30px;
+    border: none;
+    background-color:rgb(0, 0, 0);
+    color: white;
+}
+
