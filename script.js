@@ -42,10 +42,14 @@ function balanceSummary(){
             .reduce((sum,expense)=>sum+expense.amount,0);
     const balance=income-expense;
     summary.innerHTML=`
-    <h2>Balance Summary</h2>
-    <h3>Income: $${income}</h3>
-    <h3>Expense: $${expense}</h3>
-    <h3>Balance: $${balance}</h3>`;
+    <div class="top">
+        <div class="balance-bar"><p>Your Balance</p>  <span class="amount">$${balance}</span></div>
+    </div>
+    <div class="bottom">
+        <div class="income-bar"><p>Income</p> <span class="amount">$${income}</span></div>
+        <div class="expense-bar"><p>Expense</p> <span class="amount"> $${expense}</span></div>
+    </div>
+    `;
 
 
 }
