@@ -3,14 +3,18 @@ h1 {
     margin-top: 20px;
     font-size: 40px;
 }
+h2{
+    text-align: center;
+}
 
 .input-container{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 200px
     margin: 10px;
     padding: 10px;
     gap: 8px;
+    height: 300px;
 }
 
 .input-container input,
@@ -42,4 +46,14 @@ h1 {
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.top-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+.balance-summary{
+ 
 }

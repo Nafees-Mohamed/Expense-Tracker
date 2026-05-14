@@ -9,9 +9,8 @@
 </head>
 
 <body>
-  
-    <form>
-        <h1>Expense Tracker</h1>
+    <h1>Expense Tracker</h1>
+    <div class="top-container">       
         <div class="input-container">
             <input type="number" class="js-amount" placeholder="Enter amount">
             <input type="text" class="js-description" placeholder="Description">
@@ -26,10 +25,12 @@
                 <option>Salary</option>
             </select>
             <button type="button" class="js-add">Add Transaction</button>
-        </div>
+        </div>  
 
-        
-    </form>
+        <div class="balance-summary">
+        </div>
+    </div>
+ 
     <div class="expense-history">
         <div class="head">Amount</div>
         <div class="head">Description</div>
