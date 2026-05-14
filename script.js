@@ -10,17 +10,18 @@ document.querySelector('.js-Expense').addEventListener('click',()=>render('Expen
 
 function addTransaction(){
     const amount=document.querySelector('.js-amount').value;
-    const description=document.querySelector('.js-description').value;
+    const description=document.querySelector('.js-description').value || 'NULL';
     const category=document.querySelector('.js-category').value;
     const type=document.querySelector('.js-type').value;
 
-    let expense={
-        id: Date.now(),
-        amount: Number(amount),
-        description: description,
-        type:type,
-        category:category
-    }
+let expense = {
+    id: Date.now(),
+    amount: Number(amount),
+    description: description,
+    type: type,
+    category: category,
+    date: new Date().toLocaleDateString() 
+}
 
     expenses.push(expense);
     saveToStorage();
@@ -56,13 +57,14 @@ function render(type = 'all'){
     ?expenses 
     : expenses.filter(e => e.type === type)
     history.innerHTML = "";
-    filtered.forEach(filter => {
+    filtered.forEach(expense => {
         history.innerHTML += `
-            <div>$${filter.amount}</div>
-            <div>${filter.description}</div>
-            <div>${filter.type}</div>
-            <div>${filter.category}</div>
-            <button class="delete-button"onclick="deleteTransaction(${filter.id})">Delete</button>
+            <div>${expense.date}</div>
+            <div>$${expense.amount}</div>
+            <div>${expense.description}</div>
+            <div>${expense.type}</div>
+            <div>${expense.category}</div>
+            <button class="delete-button"onclick="deleteTransaction(${expense.id})">Delete</button>
         `;
     })
 }
