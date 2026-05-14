@@ -1,8 +1,11 @@
-let expenses=[]; 
+let expenses= JSON.parse(localStorage.getItem('expenses')) || []; 
 
 document.querySelector('.js-add').addEventListener('click',addTransaction);
 const history = document.querySelector('.expense-history');
 const summary = document.querySelector('.balance-summary');
+document.querySelector('.js-all').addEventListener('click',()=>render());
+document.querySelector('.js-Income').addEventListener('click',()=>render('Income'));
+document.querySelector('.js-Expense').addEventListener('click',()=>render('Expense'));
 
 
 function addTransaction(){
@@ -20,17 +23,12 @@ function addTransaction(){
     }
 
     expenses.push(expense);
-    
-    console.log(expenses);
-
-        history.innerHTML += `
-        <div>$${expense.amount}</div>
-        <div>${expense.description}</div>
-        <div>${expense.type}</div>
-        <div>${expense.category}</div>
-
-    `;
+    saveToStorage();
+    render();
     balanceSummary();
+
+    document.querySelector('.js-amount').value = '';
+    document.querySelector('.js-description').value = ''; 
 }
 
 
@@ -48,5 +46,37 @@ function balanceSummary(){
     <h3>Expense: $${expense}</h3>
     <h3>Balance: $${balance}</h3>`;
 
+
 }
 
+
+function render(type = 'all'){
+
+    const filtered= type === 'all'
+    ?expenses 
+    : expenses.filter(e => e.type === type)
+    history.innerHTML = "";
+    filtered.forEach(filter => {
+        history.innerHTML += `
+            <div>$${filter.amount}</div>
+            <div>${filter.description}</div>
+            <div>${filter.type}</div>
+            <div>${filter.category}</div>
+            <button class="delete-button"onclick="deleteTransaction(${filter.id})">Delete</button>
+        `;
+    })
+}
+
+function saveToStorage(){
+    localStorage.setItem('expenses',JSON.stringify(expenses));
+}
+
+function deleteTransaction(id){
+    expenses=expenses.filter(e => e.id!== id);
+    saveToStorage();
+    render();
+    balanceSummary();
+
+}
+render();
+balanceSummary();
