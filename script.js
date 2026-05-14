@@ -43,11 +43,11 @@ function balanceSummary(){
     const balance=income-expense;
     summary.innerHTML=`
     <div class="top">
-        <div class="balance-bar"><p>Your Balance</p>  <span class="amount">$${balance}</span></div>
+        <div class="balance-bar"><p>Your Balance</p>  <span class="amount">₹${balance}</span></div>
     </div>
     <div class="bottom">
-        <div class="income-bar"><p>Income</p> <span class="amount">$${income}</span></div>
-        <div class="expense-bar"><p>Expense</p> <span class="amount"> $${expense}</span></div>
+        <div class="income-bar"><p><span class="emoji">📈</span>Income</p> <span class="amount">₹${income}</span></div>
+        <div class="expense-bar"><p><span class="emoji">📉</span>Expense</p> <span class="amount">₹${expense}</span></div>
     </div>
     `;
 
@@ -64,7 +64,7 @@ function render(type = 'all'){
     filtered.forEach(expense => {
         history.innerHTML += `
             <div>${expense.date}</div>
-            <div>$${expense.amount}</div>
+            <div>₹${expense.amount}</div>
             <div>${expense.description}</div>
             <div>${expense.type}</div>
             <div>${expense.category}</div>

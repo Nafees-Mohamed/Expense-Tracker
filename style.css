@@ -48,8 +48,8 @@ p {
     flex-direction: column;
     background-color:#fafafa;
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);  /
-    padding: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);  
+    padding: 20px;
     width: 340px;
     height: auto;
     gap: 8px;
@@ -206,4 +206,8 @@ p {
 
 .expense-bar {
     background: rgb(230, 87, 87);
+}
+
+.emoji{
+    font-size: 18x;
 }
