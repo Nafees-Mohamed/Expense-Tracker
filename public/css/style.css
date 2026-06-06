@@ -1,27 +1,83 @@
 
-
 body {
     background-color: #f0f2f5;
     font-family: 'Segoe UI', sans-serif;
     color: #1a1a2e;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
-h1 {
+.header-section {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;  
+}
+.header-section h1 {
+    flex: 1;                        
+    text-align: center;          
+    margin:15px;                      
     font-size: 32px;       
     font-weight: 700;
     text-align: center; 
     color: #1a1a2e;
 }
-
-h2 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #444;
-    text-align: center;
+.js-logout{
+    border-radius: 24px;
+    padding: 10px 14px;
+    
 }
 
+.js-logout:hover{
+    box-shadow: #16213e;
+}
+h2{
+    font-size: 32px;       
+    font-weight: 700;
+    text-align: center; 
+    color: #1a1a2e;
+    text-align:center;
+    margin-left: 0;
+
+}
+
+.transaction-history{
+    font-size: 20px;
+    font-weight: 500;
+    color: #16213e;;
+    padding: 10px 16px;
+    border-radius:10px ;
+    border: none;
+    
+    margin-top: 20px;
+  
+}
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.transaction-history:hover{
+    background-color: #16213e;
+    color: white;
+}
+.history-top{
+    display: flex;
+    align-items: center;
+    
+}
+.expense-page{
+    border-radius: 50px;
+    width: 70px;
+    padding: 10px 16px;
+    border: none; 
+}
+.expense-page:hover{
+    background-color:#16213e;
+    color: white;
+}
 p {
     font-size: 13px;        
     color: #aaa;
@@ -89,7 +145,7 @@ p {
 }
 .expense-history-header{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns:2fr 2fr 2fr 2fr 2fr 1fr 1fr; 
     gap: 10px;
     padding: 10px;
     background-color: white;
@@ -101,13 +157,16 @@ p {
 
 .expense-history{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr 1fr;
     gap: 15px;
     padding: 10px;
     margin: 0 20px 20px 20px;
     background: white;
     border-radius: 13px;
 }
+
+
+
 .head{
     margin-bottom: 10px;
     font-size: 13px;
@@ -122,17 +181,18 @@ p {
     justify-content: center;
     margin-bottom: 10px;
 }
-.display button{
+.display button,.display select{
     padding: 8px 20px;
     border-radius: 18px;
-    width:80px;
+    width:auto;
+    min-width:70px;
     border: none;
     margin: 5px 5px;
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
 }
-.display button:hover{
+.display button:hover,.display select:hover{
     color: white;
     background-color: black;
 }
@@ -147,8 +207,23 @@ p {
     font-weight:500;
 }
 
+
 .delete-button:hover{
     background-color:#e74c3c;
+    color:white;
+}
+.update-button{
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    background-color:#7e82f8;
+    color:#d0deed;
+    cursor: pointer;
+    font-size:12px;
+    font-weight:500;
+}
+.update-button:hover{
+    background-color:#2a58ff;
     color:white;
 }
 .balance-summary{
@@ -156,6 +231,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
 }
 
 .top{
@@ -209,5 +285,5 @@ p {
 }
 
 .emoji{
-    font-size: 18x;
+    font-size: 18px;
 }

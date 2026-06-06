@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracler</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="../css/style.css">
     
 </head>
 
-<body>
-    <h1>Expense Tracker</h1>
+<body> 
+    <div class="header-section">
+        <h1>Expense Tracker</h1>
+        <button class="js-logout">⏻</button>
+    </div>
+    
     <div class="balance-summary"></div>
     <div class="middle">
         <div class="input-container">
@@ -22,33 +26,23 @@
             <select class="js-category">
                 <option>Food</option>
                 <option>Travel</option>
-                <option>Shopping</option>
-                <option>Salary</option>
+                <option>Housing</option>
+                <option>Lifestyle</option>
             </select>
             <button type="button" class="js-add">Add Transaction</button>
         </div>  
     </div> 
-    <h2>Transaction History</h2>
-    <div class="display">
-        <button class="js-all">All</button>
-        <button class="js-Income">Income</button>
-        <button class="js-Expense">Expense</button>
-    </div>
-  
+    <div class="footer">
+        <a href="/html/transaction.html">
+            <button class="transaction-history">Transaction History</button>
+        </a>
 
-    <div class="expense-history-header">
-        <div class="head">Date</div>
-        <div class="head">Amount</div>
-        <div class="head">Description</div>
-        <div class="head">Type</div>
-        <div class="head">Category</div>
-        <div class="head">Action</div>
-    </div>    
-    <div class="expense-history">
-  
     </div>
+        
+    
 
-    <script src="script.js"></script>
+
+    <script src="../js/script.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="history-top">
+         <a href="expense.html">
+            <button class="expense-page">↩</button>
+        </a>
+        <h2>Transaction History</h2>
+    </div>
+   
+    <div class="display">   
+        <button class="js-all">All</button>
+        <button class="js-Income">Income</button>
+        <button class="js-Expense">Expense</button>
+         <select class="js-category-filter">
+                <option value=''>All</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Housing</option>
+                <option>Lifestyle</option>
+        </select>
+    </div>
+    
+    <div class="expense-history-header">
+        <div class="head">Date</div>
+        <div class="head">Description</div>
+        <div class="head">Type</div>
+        <div class="head">Category</div>
+        <div class="head">Amount</div>
+        <div class="head">Update</div> 
+        <div class="head">Action</div>
+        
+    </div>    
+    <div class="expense-history">
+  
+    </div>
+
+    <script src="../js/history.js"></script>
+</body>
+</html>
