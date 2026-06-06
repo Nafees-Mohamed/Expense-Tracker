@@ -36,10 +36,9 @@ body {
 h2{
     font-size: 32px;       
     font-weight: 700;
-    text-align: center; 
     color: #1a1a2e;
     text-align:center;
-    margin-left: 0;
+    justify-content: center;
 
 }
 
@@ -66,7 +65,13 @@ h2{
 .history-top{
     display: flex;
     align-items: center;
+    justify-content: center;
     
+}
+.history-top a{
+    position:absolute;
+    left:0;
+    top: 30px;;
 }
 .expense-page{
     border-radius: 50px;
