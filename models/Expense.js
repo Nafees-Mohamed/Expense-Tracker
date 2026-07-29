@@ -5,7 +5,10 @@ const expenseSchema= new mongoose.Schema({
     description:String,
     type:String,
     category:String,
-    date:String,
+    date: {
+    type: Date,
+    default: Date.now
+    },
     userId: {type:mongoose.Schema.Types.ObjectId,ref:'User'}
 });
 
